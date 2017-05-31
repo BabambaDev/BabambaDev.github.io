@@ -3,7 +3,7 @@ layout: post
 title:  "Part1 Ch6 흐름 제어"
 date: 2017-05-23 10:00
 categories: Swift
-tags:  Swift3(책 저자 yagom님) 
+tags:  Swift3 
 author: Babamba
 ---
 
