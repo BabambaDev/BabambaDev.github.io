@@ -15,12 +15,12 @@ Quartz2D Overview 부분 해석입니다.
 의역 오역 넘쳐나니 주의하세요.
 
 
-##문서 번역
+## 문서 번역
  
 Core Graphics(Quartz 2D)
 ===
 
-##Ch.1 Quartz 2D 개요
+## Ch.1 Quartz 2D 개요
 
 
 * 2차원적으로 그리기 위한 엔진
@@ -37,7 +37,7 @@ Core Graphics(Quartz 2D)
 
 * 다른 모든 graphics와 imaging technologies(Core Image, Core Video, OPenGL, Quick Time) 함께 작동할 수 있다.
 
-##1. The Page
+## 1. The Page
 
 * Quartz 2D 이미징을 위해 painter’s model를 사용한다. 
 * painter’s model에서, 각 연속적인 드로잉 작업은 출력 "캔버스"에 "Paint" 레이어를 적용한다.(이를 Page라 부른다.)
@@ -55,7 +55,7 @@ Core Graphics(Quartz 2D)
 * Page는 실제 용지이거나 가상용지(pdf), 비트맵 이미지일 수 있다.
 * Page의 특성은 사용하는 graphics context에 따른다.
 
-##2. Drawing Destinations: The Graphics Context
+## 2. Drawing Destinations: The Graphics Context
 
 * Graphics Context는 불투명한 데이터 타입([CGContextRef](https://developer.apple.com/reference/coregraphics/cgcontextref?language=objc))이다.
 * 데이터 타입에는 Quartz 정보가 압축 되어있다. 그 정보는 출력장치(PDF파일, 비트맵, 디스플레이의 윈도우)에 이미지를 그리는 데에 사용한다.
@@ -72,7 +72,7 @@ Core Graphics(Quartz 2D)
  * 비트맵 graphics context에 RGB 컬러, CMYK 컬러, grayscale을 그릴 수 있다. 비트맵은 사각형 픽셀의 어레이(또는 래스터)이다. 각 픽셀은 이미지의 점을 표현한다. 비트맵 이미지들은 samepled image로 불린다.
  * layer context([CGLayerRef](https://developer.apple.com/reference/coregraphics/cglayerref))는 대상이 다른 graphics context에 관련된 offscreen drawing이다. 레이어를 만든 graphics context에 레이어를 그릴때 최적화 되어있도록 설계 되었다. layer context는 비트맵 graphics context 보다 offscreen drawing에서 더 좋은 선택일 수 있다.
 
-##3. Quartz 2D Opaque Data Types
+## 3. Quartz 2D Opaque Data Types
 
 * Opaque Data Type : 해당 데이터 타입의 내부 정보가 외부 인터페이스로 모두 노출되지 않은 데이터 타입
 
@@ -100,7 +100,7 @@ Core Graphics(Quartz 2D)
 |CGPDFScannerRef, CGPDFContentStreamRef|PDF메타데이터를 분석한다.|
 |CGPSConverterRef|PsotScript를 PDF로 변환하는 데 사용된다. iOS에서는 사용불가|
 
-##4. Graphics States
+## 4. Graphics States
 
 * Quartz는 current graphics state의 파라미터에 따라 드로잉 작업결과를 수정한다.
 * graphics state는 드로잉 루틴에 대한 인수(argument)로 사용되는 파라미터를 포함한다. 
@@ -134,7 +134,7 @@ Core Graphics(Quartz 2D)
 |Text: font, font size, character spacing, text drawing mode|[Text](https://developer.apple.com/library/content/documentation/GraphicsImaging/Conceptual/drawingwithquartz2d/dq_text/dq_text.html#//apple_ref/doc/uid/TP30001066-CH213-TPXREF101)|
 |Blend mode|[Paths](https://developer.apple.com/library/content/documentation/GraphicsImaging/Conceptual/drawingwithquartz2d/dq_paths/dq_paths.html#//apple_ref/doc/uid/TP30001066-CH211-TPXREF101) and [Bitmap Images and Image Masks](https://developer.apple.com/library/content/documentation/GraphicsImaging/Conceptual/drawingwithquartz2d/dq_images/dq_images.html#//apple_ref/doc/uid/TP30001066-CH212-TPXREF101)|
 
-##5. Quartz 2D Coordinate Systems
+## 5. Quartz 2D Coordinate Systems
 
 * 그림 1-4에서 보여주는 데 좌표계는 Page의 위치와 크기를 나타내는데 사용되는 위치 범위를 정의한다. 
 * Graphics의 사용자 공간 좌표계(간단히 사용자 공간)에서의 위치와 사이즈가 특정된다. 
@@ -172,7 +172,7 @@ Core Graphics(Quartz 2D)
 
 * 중요 :  위의 설명은 iOS에서 Quartz를 직접 타깃으로하는 애플리케이션을 작성하려는 경우 이해하는 데 필수적이지만 충분하지는 않습니다. iOS 3.2 이상에서, UIKit이 응용 프로그램의 드로잉 context를 만들 때 기본 UIKit 규칙과 일치하도록 context를 추가로 변경합니다. 특히, CTM의 영향을받지 않는 패턴과 그림자는 UIKit의 좌표계와 규칙이 일치하도록 개별적으로 조정됩니다. 이 경우 애플리케이션이 UIKit에서 제공하는 컨텍스트의 동작과 일치하도록 Quartz에서 만든 컨텍스트를 변경하는 데 사용할 수있는 CTM과 동일한 메커니즘이 없습니다. 어플리케이션은 그것이 드로잉하고있는 컨텍스트의 종류를 인식하고 컨텍스트의 예상과 일치하도록 동작을 조정해야한다.
 
-##6. Memory Management: Object Ownership
+## 6. Memory Management: Object Ownership
 
 * Quartz는 객체를 reference count하는 경우 Core Foundation 메모리 관리 모델을 사용한다. 생성시 Core Foundation 객체는 reference count 1부터 시작한다. 객체를 유지하는 함수를 호출하여 reference count를 증가시키고 객체를 릴리스하는 함수를 호출하여 reference count를 감소시킵니다. reference count를 0으로 감소 시키면 객체가 해제됩니다. 이 모델을 사용하면 객체가 다른 객체에 대한 참조를 안전하게 공유 할 수 있습니다.
 
