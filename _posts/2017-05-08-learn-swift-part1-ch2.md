@@ -1,8 +1,9 @@
 ---
 layout: post
-title:  "Part1 Ch2 스위프트 처음 시작하기"
+title:  "Part1 Ch1 스위프트"
+date: 2017-05-08 10:00
 categories: Swift
-tags:  Swift3(author yagom) 
+tags:  Swift3(책 저자 yagom님) 
 author: Babamba
 ---
 
@@ -11,6 +12,7 @@ author: Babamba
 
 ch2 스위프트 처음 시작하기 부분을 요약 정리 하겠습니다~! 중간에 빠진 부분은 임의로 생략한 부분입니다~
 
+##2장
 
 ###2.1 기본 명명 규칙
 

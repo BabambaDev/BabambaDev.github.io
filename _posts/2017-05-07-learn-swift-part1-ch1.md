@@ -1,8 +1,9 @@
 ---
 layout: post
 title:  "Part1 Ch1 스위프트"
+date: 2017-05-07 11:00
 categories: Swift
-tags:  Swift3(author yagom) 
+tags:  Swift3(책 저자 yagom님) 
 author: Babamba
 ---
 
