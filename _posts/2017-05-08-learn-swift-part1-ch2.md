@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Part1 Ch1 스위프트"
+title:  "Part1 Ch2 스위프트 기초"
 date: 2017-05-08 10:00
 categories: Swift
 tags:  Swift3(책 저자 yagom님) 

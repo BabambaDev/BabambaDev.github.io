@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Part1 Ch1 스위프트"
+title:  "Part1 Ch7 함수"
 date: 2017-05-23 11:10
 categories: Swift
 tags:  Swift3(책 저자 yagom님) 

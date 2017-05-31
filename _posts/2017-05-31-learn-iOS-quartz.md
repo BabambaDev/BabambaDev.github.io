@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Part1 Ch1 스위프트"
+title:  "Core Graphics(Quartz 2D)"
 date: 2017-05-31 10:00
 categories: iOS
 tags:  Core Graphics 
